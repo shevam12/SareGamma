@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".FrameSetting"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/radius_curve"
+    >
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="60dp"
+        android:paddingRight="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="0dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="50dp">
+
+            <TextView
+                android:id="@+id/lyrics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lyrics/Subtitles"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:padding="10dp"
+                android:clickable="true"
+                android:background="@drawable/background_radius_text"
+                />
+
+            <TextView
+                android:id="@+id/songAudio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Song Audio"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:clickable="true"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tempo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tempo"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/transpose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transpose"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:clickable="true"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_layout"
+        android:orientation="horizontal" />
+
+</LinearLayout>
+
