@@ -1,87 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".FrameSetting"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@drawable/radius_curve"
-    >
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingTop="20dp"
-        android:paddingLeft="10dp"
-        android:paddingBottom="60dp"
-        android:paddingRight="10dp"
-        >
+    tools:ignore="MissingDefaultResource">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginTop="0dp"
-            android:paddingRight="20dp"
-            android:paddingLeft="10dp"
-            android:paddingTop="30dp"
-            android:paddingBottom="50dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="221dp"
+        android:layout_height="413dp"
+        android:layout_marginEnd="510dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/lyrics"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lyrics/Subtitles"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="8dp"
-                android:padding="10dp"
-                android:clickable="true"
-                android:background="@drawable/background_radius_text"
-                />
 
-            <TextView
-                android:id="@+id/songAudio"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Song Audio"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:padding="10dp"
-                android:clickable="true"
-                android:layout_marginBottom="8dp" />
+        <TextView
+            android:id="@+id/lyrics"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/background_radius_text"
+            android:clickable="true"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:text="Lyrics/Subtitles"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/songAudio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tempo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tempo"
-                android:padding="10dp"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:clickable="true"
-                android:layout_marginBottom="8dp" />
+        <TextView
+            android:id="@+id/songAudio"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:padding="10dp"
+            android:text="Song Audio"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tempo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/lyrics"
+            app:layout_constraintTop_toBottomOf="@+id/lyrics" />
 
-            <TextView
-                android:id="@+id/transpose"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Transpose"
-                android:textSize="18sp"
-                android:padding="10dp"
-                android:clickable="true"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tempo"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="2dp"
+            android:padding="10dp"
+            android:text="Tempo"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/transpose"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/songAudio"
+            app:layout_constraintTop_toBottomOf="@+id/songAudio" />
 
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/transpose"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="131dp"
+            android:clickable="true"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:text="Transpose"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tempo"
+            app:layout_constraintTop_toBottomOf="@+id/tempo" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
         android:id="@+id/fragment_layout"
-        android:orientation="horizontal" />
+        android:layout_width="510dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 

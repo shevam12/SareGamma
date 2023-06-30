@@ -5,9 +5,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".LyricsSubtitles"
-        android:paddingLeft="0dp"
-        android:paddingRight="0dp"
-        android:paddingTop="0dp"
         android:background="#FFEBF1F5"
         tools:ignore="MissingDefaultResource">
 
@@ -15,131 +12,164 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/appCompatButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="38dp"
+            android:text="X"
+            app:layout_constraintBottom_toTopOf="@+id/textView20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.928"
+            app:layout_constraintStart_toEndOf="@+id/textView20"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView21"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:layout_marginEnd="87dp"
-            android:text="X"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="33dp"
+            android:layout_marginEnd="417dp"
+            android:fontWeight="600"
+            android:text="Ek ladkhi ko dekha - Mukhda 1"
+            android:textColor="#FF03090D"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView17"
+            app:layout_constraintEnd_toStartOf="@+id/appCompatButton"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="550dp"
-            android:layout_height="250dp"
-            android:layout_marginStart="51dp"
-            android:layout_marginTop="67dp"
-            android:orientation="vertical"
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="154dp"
+            android:text="Subtitles language"
+            app:layout_constraintBottom_toTopOf="@+id/textView18"
+            app:layout_constraintEnd_toStartOf="@+id/view3"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
-            <TextView
-                android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="228dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="41dp"
+            android:text="These are the instructions that will be visible to you on screen."
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup3"
+            app:layout_constraintEnd_toStartOf="@+id/view3"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="@+id/textView17"
+            app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup3"
+            android:layout_width="122dp"
+            android:layout_height="138dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="147dp"
+            android:layout_marginBottom="96dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/view3"
+            app:layout_constraintStart_toStartOf="@+id/textView18"
+            app:layout_constraintTop_toBottomOf="@+id/textView18">
+
+            <RadioButton
+                android:layout_width="109dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                android:fontWeight="600"
-                android:text="Ek ladkhi ko dekha - Mukhda 1"
-                android:textColor="#FF03090D"
-                android:textSize="16sp" />
+                android:text="English"
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                />
 
-                <LinearLayout
-                    android:layout_width="250dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+            <RadioButton
+                android:layout_width="109dp"
+                android:layout_height="wrap_content"
+                android:text="Hindi " />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Subtitles language" />
+            <RadioButton
+                android:layout_width="109dp"
+                android:layout_height="wrap_content"
+                android:text="Off" />
+        </RadioGroup>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="These are the instructions that will be visible to you on screen." />
+        <View
+            android:id="@+id/view3"
+            android:layout_width="1dp"
+            android:layout_height="148dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="62dp"
+            android:background="#595858"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/radioGroup4"
+            app:layout_constraintStart_toEndOf="@+id/textView18"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.39" />
 
-                    <RadioGroup
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="97dp"
+            android:layout_marginEnd="269dp"
+            android:layout_marginBottom="5dp"
+            android:text="Lyrics language"
+            app:layout_constraintBottom_toTopOf="@+id/textView20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/view3"
+            app:layout_constraintTop_toTopOf="parent" />
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="English"
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="226dp"
+            android:layout_height="43dp"
+            android:layout_marginEnd="144dp"
+            android:layout_marginBottom="5dp"
+            android:text="During a song, the lyrics that will be displayed on screen."
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView19"
+            app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
-                            />
+        <RadioGroup
+            android:id="@+id/radioGroup4"
+            android:layout_width="149dp"
+            android:layout_height="139dp"
+            android:layout_marginEnd="221dp"
+            android:layout_marginBottom="78dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView20"
+            app:layout_constraintTop_toBottomOf="@+id/textView20">
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Hindi " />
+            <RadioButton
+                android:layout_width="134dp"
+                android:layout_height="wrap_content"
+                android:text="English"
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Off" />
-                    </RadioGroup>
+                />
 
+            <RadioButton
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:text="Hindi " />
 
-                </LinearLayout>
-
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="148dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:background="#595858" />
-
-                <LinearLayout
-                    android:layout_width="250dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Lyrics language" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="During a song, the lyrics that will be displayed on screen." />
-
-                    <RadioGroup
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="English"
-
-                            />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Hindi " />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Off" />
-                    </RadioGroup>
+            <RadioButton
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:text="Off" />
+        </RadioGroup>
 
 
-                </LinearLayout>
-            </LinearLayout>
-
-
-        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>
 
