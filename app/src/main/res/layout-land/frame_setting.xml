@@ -8,13 +8,15 @@
     android:background="@drawable/radius_curve"
     tools:ignore="MissingDefaultResource">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout3"
-        android:layout_width="221dp"
+        android:layout_width="178dp"
         android:layout_height="413dp"
         android:layout_marginEnd="510dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -64,6 +66,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/transpose"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/songAudio"
             app:layout_constraintTop_toBottomOf="@+id/songAudio" />
 
@@ -83,16 +86,22 @@
             app:layout_constraintTop_toBottomOf="@+id/tempo" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-    <FrameLayout
-        android:id="@+id/fragment_layout"
-        android:layout_width="510dp"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
+    <LinearLayout
+        android:layout_width="743dp"
+        android:layout_height="357dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <FrameLayout
+            android:id="@+id/fragment_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
