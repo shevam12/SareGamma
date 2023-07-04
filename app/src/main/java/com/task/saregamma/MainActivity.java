@@ -1,8 +1,6 @@
 package com.task.saregamma;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.app.Dialog;
 import android.os.Bundle;
@@ -12,8 +10,6 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.zip.Inflater;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 FrameLayout frameLayout =(FrameLayout) settingsDialog.findViewById(R.id.fragment_layout);
                 TextView lyrics=(TextView) settingsDialog.findViewById(R.id.lyrics);
                 TextView songAudio=(TextView) settingsDialog.findViewById(R.id.songAudio);
-                TextView tempo=(TextView) settingsDialog.findViewById(R.id.tempo);
+                TextView tempo=(TextView) settingsDialog.findViewById(R.id.subTitleLanguage);
                 TextView transpose=(TextView) settingsDialog.findViewById(R.id.transpose);
 
 

@@ -3,6 +3,7 @@ package com.task.saregamma;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,6 +14,7 @@ public class FrameSetting extends AppCompatActivity {
     private FrameLayout frameLayout;
     private TextView lyrics,songAudio,tempo,transpose;
 
+    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +23,7 @@ public class FrameSetting extends AppCompatActivity {
         frameLayout =(FrameLayout) findViewById(R.id.fragment_layout);
         lyrics=(TextView) findViewById(R.id.lyrics);
         songAudio=(TextView) findViewById(R.id.songAudio);
-        tempo=(TextView) findViewById(R.id.tempo);
+        tempo=(TextView) findViewById(R.id.subTitleLanguage);
         transpose=(TextView) findViewById(R.id.transpose);
 
         FragmentManager fragmentManager=getSupportFragmentManager();
